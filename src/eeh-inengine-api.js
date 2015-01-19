@@ -21,6 +21,10 @@
         return this.queryResource('JobType');
     };
 
+    InEngineApi.prototype.getTimeZones = function () {
+        return this.queryResource('TimeZone');
+    };
+
     angular.module('eehInEngine.api', ['ngResource'])
     .provider('eehInEngineApi', function () {
         var _apiUrl = 'http://localhost:9001/api';
