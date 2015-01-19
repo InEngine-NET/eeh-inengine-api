@@ -18,7 +18,7 @@
     };
 
     InEngineApi.prototype.getJobTypes = function () {
-        return this.queryResource('Job');
+        return this.queryResource('JobType');
     };
 
     angular.module('eehInEngine.api', ['ngResource'])
