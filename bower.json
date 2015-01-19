@@ -1,6 +1,6 @@
 {
   "name": "eeh-inengine-api",
-  "version": "2.0.0-beta1",
+  "version": "2.0.0-beta2",
   "main": "src/eeh-inengine-api.js",
   "homepage": "http://inengine.net",
   "authors": [
