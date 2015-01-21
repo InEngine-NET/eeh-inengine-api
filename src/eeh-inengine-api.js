@@ -32,7 +32,8 @@
             cronTrigger: 'CronTrigger',
             jobType: 'JobType',
             simpleTrigger: 'SimpleTrigger',
-            timeZone: 'TimeZone'
+            timeZone: 'TimeZone',
+            healthStatus: 'HealthStatus'
         };
         this.endpointNames = function (value) {
             if (angular.isUndefined(value)) {
@@ -57,7 +58,8 @@
             cronTriggers:   getResource(endpointNames.cronTrigger),
             simpleTriggers: getResource(endpointNames.simpleTrigger),
             timeZones: getResource(endpointNames.timeZone),
-            jobTypes: getResource(endpointNames.jobType)
+            jobTypes: getResource(endpointNames.jobType),
+            healthStatus: getResource(endpointNames.healthStatus)
         }
     };
 
@@ -97,6 +99,10 @@
 
     InEngineApi.prototype.getJobTypes = function () {
         return this.resources.jobTypes.query().$promise;
+    };
+
+    InEngineApi.prototype.getHealthStatus = function () {
+        return this.resources.healthStatus.query().$promise;
     };
 
     angular.module('eehInEngine.api', ['ngResource'])
