@@ -102,7 +102,7 @@
     };
 
     InEngineApi.prototype.getHealthStatus = function () {
-        return this.resources.healthStatus.query().$promise;
+        return this.resources.healthStatus.get().$promise;
     };
 
     angular.module('eehInEngine.api', ['ngResource'])
